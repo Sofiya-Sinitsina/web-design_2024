@@ -4,9 +4,15 @@
     flex-direction: row; /* Располагает дочерние элементы .navbar в строку (по горизонтали) */
     justify-content: space-between; /* Распределяет дочерние элементы .navbar равномерно, 
     с максимальным пространством между ними */
-    background-color: #faf7f7; /* Устанавливает фоновый цвет для .navbar */
+    background-color: #f094bd; /* Устанавливает фоновый цвет для .navbar */
+    margin-bottom: 20px;
+    height: 70px;
 }
 
+.navbar img {
+    margin-top: 5px;
+    margin-left: 5px;
+}
 .navbar ul {
     display: flex; /* Устанавливает контейнер ul как flex-контейнер для его дочерних элементов (li) */
     flex-direction: row; /* Располагает элементы списка (li) в строку (по горизонтали) */
@@ -20,13 +26,13 @@
 }
 
 .navbar ul li:hover {
-    background-color: #7cc6e5; /* Изменяет фоновый цвет элемента списка при наведении курсора */
+    background-color: rgb(216, 139, 193); /* Изменяет фоновый цвет элемента списка при наведении курсора */
     border-radius: 20%; /* Скругляет углы элемента списка при наведении курсора */
 }
 
 .navbar ul li a {
     text-decoration: none; /* Убирает подчеркивание у ссылок */
-    color: black; /* Устанавливает цвет текста ссылок черным */
+    color: rgb(196, 110, 170); /* Устанавливает цвет текста ссылок черным */
     margin: auto; /* Центрирует текст внутри элемента списка */
 }
 
@@ -37,12 +43,11 @@
 
 .navbar div a {
     text-decoration: none; /* Убирает подчеркивание у ссылок в div */
-    color: black; /* Устанавливает цвет текста ссылок черным */
+    color: rgb(196, 110, 170); /* Устанавливает цвет текста ссылок черным */
     margin: auto; /* Центрирует текст внутри div */
 }
 
 .navbar div:hover {
-    background-color: #7cc6e5; /* Изменяет фоновый цвет div при наведении курсора */
     border-radius: 20%; /* Скругляет углы div при наведении курсора */
 }
 
@@ -76,7 +81,7 @@
 .container img:hover {
     transform: scale(1.1); /* Увеличение изображения на 10% */
     transition: 0.5s ease; /* Плавный переход за 0.5 секунды */
-    box-shadow: 10px 10px 5px #7cc6e5; /* Изменение цвета тени на синий */
+    box-shadow: 10px 10px 5px rgb(94, 68, 86); /* Изменение цвета тени на синий */
 }
 
 /* Фон для всей страницы */
@@ -85,10 +90,7 @@ body {
 }
 
 /* Фон для основного содержимого страницы */
-main {
-    background: linear-gradient(90deg, rgba(254,254,255,1) 0%, rgba(226,237,233,0.72) 37%, rgba(208,238,243,1) 100%);
-    /* Градиентный фон, плавно переходящий от светлого к более темному оттенку */
-}
+
 
 /* Стили для текста в параграфах */
 p {
@@ -99,10 +101,6 @@ p {
     margin-left: 10px; /* Отступы по бокам */
 }
 
-/* Эффект при наведении на параграф */
-p:hover {
-    background-color: #7cc6e5; /* Синий фон при наведении */
-}
 
 /* Секции внутри контейнера */
 .container section {
@@ -157,7 +155,7 @@ p:hover {
 .audio1 img, .audio2 img, .audio3 img {
     margin: auto; /* Центрирование изображений */
     border-radius: 10%; /* Скругление углов изображений */
-    box-shadow: 5px 5px 5px #7cc6e5; /* Добавление синеватой тени к изображениям */
+    box-shadow: 5px 5px 5px rgb(94, 68, 86); /* Добавление синеватой тени к изображениям */
 }
 
 .container-book {
@@ -174,7 +172,7 @@ p:hover {
 .book1 img, .book2 img, .book3 img {
     margin: auto; /* Центрирование изображений */
     border-radius: 10%; /* Скругление углов изображений */
-    box-shadow: 5px 5px 5px #7cc6e5; /* Добавление синеватой тени к изображениям */
+    box-shadow: 5px 5px 5px rgb(94, 68, 86); /* Добавление синеватой тени к изображениям */
     margin-bottom: 10px; /* Отступ снизу для изображений */
 }
 
@@ -190,7 +188,7 @@ p:hover {
 }
 
 .book1 a:hover, .book2 a:hover, .book3 a:hover {
-    background-color: #7cc6e5; /* Изменение фона ссылки на синий при наведении */
+    background-color: rgb(94, 68, 86); /* Изменение фона ссылки на синий при наведении */
     transition: 0.7s ease; /* Плавный переход фона за 0.7 секунды */
 }
 
@@ -203,10 +201,92 @@ footer {
     display: flex;
     flex-direction: row; /* Элементы внутри футера располагаются горизонтально */
     justify-content: center; /* Центрирование содержимого футера */
+    background-color: #f094bd;
 }
 
 footer a {
     margin-right: 10px; /* Отступ справа у ссылок в футере */
+}
+
+.burger {
+    display: none;
+}
+
+.navbar ul .work {
+    position: relative; /* Set the position to relative to enable absolute positioning of its child elements */
+    display: flex; /* Use flexbox for layout */
+    z-index: 10; /* Set stacking order */
+}
+
+.navbar ul .work ul {
+    position: absolute; /* Position the dropdown menu absolutely relative to its nearest positioned ancestor */
+    flex-direction: column; /* Arrange children in a column */
+    left: 0; /* Align the left edge of the dropdown with the parent */
+    top: 100%; /* Position the top of the dropdown just below the parent */
+    width: 100px; /* Set a fixed width for the dropdown */
+    display: none; /* Initially hide the dropdown */
+    padding: 0; /* Remove default padding */
+    z-index: 20; /* Set a higher stacking order for the dropdown */
+}
+
+.navbar ul .work ul li {
+    z-index: 20; /* Ensure list items have the same stacking order as the parent */
+    background-color: white; /* Set background color */
+    margin-bottom: 2px; /* Add space between items */
+    border: 1px solid rgb(196, 110, 170);
+    border-radius: 5px;
+}
+
+.navbar ul .work:hover ul {
+    display: block; /* Show the dropdown when hovering over the parent */
+}
+
+.navbar ul .work ul li:hover {
+    background-color: rgb(216, 139, 193); /* Change background color on hover */
+    border-radius: 0; /* Remove border radius */
+}
+
+.form {
+    flex-direction: column; /* Arrange the children of the .form container in a column layout */
+}
+
+.form form {
+    display: flex; /* Use flexbox for the form layout */
+    flex-direction: column; /* Arrange form elements in a column */
+}
+
+.form form fieldset {
+    display: flex; /* Use flexbox for the fieldset layout */
+    flex-direction: column; /* Arrange fieldset elements in a column */
+    width: 50%; /* Set the width of the fieldset to 50% of the container */
+    margin: auto; /* Center the fieldset horizontally */
+    margin-top: 30px; /* Add a margin of 30px to the top */
+    margin-bottom: 10px; /* Add a margin of 10px to the bottom */
+}
+
+.form form fieldset input {
+    margin-bottom: 10px; /* Add a margin of 10px to the bottom of each input element */
+}
+
+.form form fieldset legend {
+    text-align: center; /* Center the legend text */
+    font-size: 1.2rem; /* Set the font size of the legend text to 1.2rem */
+    font-weight: bold; /* Make the legend text bold */
+}
+
+.form form button {
+    width: 200px; /* Set the width of the button to 200px */
+    font-size: 1.2rem; /* Set the font size of the button text to 1.2rem */
+    background-color: rgb(196, 110, 170); /* Set the background color of the button */
+    color: white; /* Set the text color of the button to white */
+    margin: auto; /* Center the button horizontally */
+    margin-bottom: 20px; /* Add a margin of 20px to the bottom */
+}
+
+.form form button:hover {
+    font-size: 1.2rem; /* Maintain the font size of the button text on hover */
+    background-color: rgb(160, 24, 119); /* Change the background color of the button on hover */
+    color: rgb(248, 243, 243); /* Change the text color of the button on hover */
 }
 
 
@@ -243,7 +323,6 @@ footer a {
     .container img:hover {
         transform: scale(1.03); /* Легкое увеличение изображения при наведении */
         transition: 0.5s ease; /* Плавный переход увеличения за 0.5 секунды */
-        box-shadow: 5px 5px 5px #7cc6e5; /* Изменение тени при наведении */
     }
 
     .interests {
@@ -284,6 +363,129 @@ footer a {
         width: 95%; /* Изображения книг занимают 95% ширины контейнера */
         height: auto; /* Высота автоматически подстраивается под ширину */
     }
+
+    .burger {
+        display: block;
+        position: relative;
+        width: 40px;
+        height: 40px;
+        margin: auto;
+        margin-left: 20px;
+        margin-right: 5px;
+        cursor: pointer;
+    }
+
+    .burger span {
+        position: absolute;
+        width: 30px;
+        left: 5px;
+        height: 3px;
+        background-color: rgb(196, 110, 170);
+        bottom: 20px;
+    }
+
+    .burger span:nth-child(1) {
+        transform: translateY(-10px);
+    }
+
+    .burger span:nth-child(3) {
+        transform: translateY(10px);
+    }
+    
+    .navbar ul {
+        position: absolute;
+        display: none;
+        
+        flex-direction: column;
+        width: 30%;
+        height: auto;
+        top: 68px;
+        right: 40%;
+        z-index: 2;
+    }
+
+    .navbar ul li {
+        text-align: right;
+        margin-top: 10px;
+        border: 1px solid rgb(196, 110, 170);
+        border-radius: 5px;
+        background-color: white;
+    }
+
+    .navbar ul li:hover {
+        background-color: rgb(99, 78, 92);
+        transform: scale(1.07);
+        transition: 0.4s ease;
+        border-radius: 5%;
+    }    
+    
+    .navbar ul li a:hover {
+        color: white;
+    }    
+
+    .navbar ul li:nth-child(1) {
+        margin-top: 20px;
+    }
+    
+    .navbar ul li a {
+        margin-left: 35%; 
+        font-size: 1.2rem; 
+    }
+    
+    .navbar.open ul {
+        display: flex;
+        transform: translateX(100%);
+        transition: 0.7s ease-in-out;
+    }
+    
+    .navbar.open .burger span:nth-child(1) {
+        transform: translateY(0) rotate(45deg);
+    }
+    
+    .navbar.open .burger span:nth-child(2) {
+        opacity: 0; 
+    }
+    
+    .navbar.open .burger span:nth-child(3) {
+        transform: translateY(0) rotate(-45deg);
+    }
+    
+    .navbar ul .work ul {
+        position: absolute; /* Position the dropdown menu absolutely relative to its nearest positioned ancestor */
+        flex-direction: column; /* Arrange children in a column */
+        top: 10; /* Align the top of the dropdown with the top of the parent */
+        width: 80px; /* Set a fixed width for the dropdown */
+        display: none; /* Initially hide the dropdown */
+        padding: 0; /* Remove default padding */
+        z-index: 20; /* Set a higher stacking order for the dropdown */
+    }
+    
+    .navbar ul .work ul li {
+        margin-bottom: 10px; /* Add bottom margin */
+        font-size: 1.2rem; /* Increase font size */
+        margin-left: -80px; /* Offset the list item 10px from the left */
+        color: rgb(196, 110, 170); /* Set text color to black */
+        border: 1px solid rgb(196, 110, 170);
+        border-radius: 5px;
+        background-color: white;
+    }
+    
+    .navbar ul .work ul li:hover {
+        background-color: rgb(94, 68, 86); /* Change background color to black on hover */
+    }
+    
+    .navbar ul .work ul li:hover a:hover {
+        color: white; /* Change text color to white when hovering over the link */
+    }
+    
+    .navbar ul .work:hover ul li a {
+        color: rgb(196, 110, 170); /* Set text color to black when hovering over the parent */
+    }
+    
+    .form form fieldset {
+        width: 80%;
+    }
+    
 }
 
 @media (min-width: 700px) and (max-width: 900px) {
@@ -296,5 +498,13 @@ footer a {
         width: 320px; /* Ширина изображения фиксирована */
         height: 200px; /* Высота изображения фиксирована */
         margin: auto; /* Центрирование изображения по горизонтали */
+    }
+
+    .burger {
+        display: none;
+    }
+
+    .form form fieldset {
+        width: 65%;
     }
 }
