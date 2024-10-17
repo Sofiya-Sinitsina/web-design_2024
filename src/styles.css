@@ -379,6 +379,94 @@ footer a {
     font-size: 1.2rem;
 }
 
+.API {
+    display: flex;
+    flex-direction: column;
+}
+
+.API .Kost {
+    display: flex;
+    flex-direction: row;
+    width: 70%;
+    margin: auto;
+    margin-bottom: 40px;
+    padding-top: 20px;
+} 
+
+.API .Kost img, span {
+    margin: auto;
+    width: 50%;
+    height: auto;
+}
+
+.API .Kem {
+    display: flex;
+    flex-direction: row;
+    width: 70%;
+    margin: auto;
+    margin-bottom: 40px;
+    padding-top: 20px;
+} 
+
+.API .Kem img, span {
+    margin: auto;
+    width: 50%;
+    height: auto;
+}
+
+.API .Deb {
+    display: flex;
+    flex-direction: row;
+    width: 70%;
+    margin: auto;
+    margin-bottom: 40px;
+    padding-top: 20px;
+} 
+
+.API .Deb img, span {
+    margin: auto;
+    width: 50%;
+    height: auto;
+}
+
+.API .Kost img {
+    border-radius: 8px;
+}
+
+.API .Kost span {
+    display: block;
+    font-size: 1.2rem;
+    margin-top: 10%;
+    padding-top: 20%;
+    width: 100%;
+}
+
+.API .Kem img {
+    border-radius: 8px;
+}
+
+.API .Kem span {
+    display: block;
+    font-size: 1.2rem;
+    margin-top: 10%;
+    padding-top: 20%;
+    width: 100%;
+}
+
+.API .Deb img {
+    border-radius: 8px;
+}
+
+.API .Deb span {
+    display: block;
+    font-size: 1.2rem;
+    margin-top: 10%;
+    padding-top: 20%;
+    width: 100%;
+}
+
+
+
 @media (max-width: 700px) {
     /* При ширине экрана до 700px */
     
@@ -578,6 +666,31 @@ footer a {
     .math form fieldset {
         width: 70%;
     }
+
+    .API .Kost {
+        width: 100%;
+    }
+
+    .API .Kem {
+        width: 100%;
+    }
+
+    .API .Deb {
+        width: 100%;
+    }
+
+    .API .Kost span {
+        font-size: 1.05rem;
+    }
+
+    .API .Kem span {
+        font-size: 1.05rem;
+    }
+
+    .API .Deb span {
+        font-size: 1.05rem;
+    }
+
 }
 
 @media (min-width: 700px) and (max-width: 900px) {
