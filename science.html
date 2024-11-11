@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./src/styles.css">
+    <title>Science</title>
+</head>
+<body>
+   <nav class="navbar">
+    <img src="./src/pic/logo.JPG" width=50 height=50 alt="logo">
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="video.html">Video</a></li>
+        <li><a href="audio.html">Music</a></li>
+        <li><a href="book.html">Book</a></li>
+        <li class="work"><a href="#">Work &bigtriangledown;</a>
+            <ul>
+                <li><a href="form.html">Form</a></li>
+                <li><a href="math.html">Math</a></li>
+                <li><a href="api.html">API</a></li>
+                <li><a href="science.html">Science</a></li>
+            </ul>
+        </li>
+    </ul>
+
+    <div>
+        
+        <div class="burger" id="burger2">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <a href="https://ku.edu.kz">Entry</a>
+    </div>
+   </nav>
+   <main>
+    <div class="collisions">
+        <div>
+            <h3>Elastic collision</h3>
+            <iframe src="https://lottie.host/embed/76df5130-b00e-418c-9294-d9470ae69e5c/ChN7UBNRE9.json"></iframe>
+            
+            <p>Initial Kinetic Energy is equal to final Kinetic Energy</p>
+        </div>
+        <div>
+            <h3>Inelastic collision</h3>
+            <iframe src="https://lottie.host/embed/a1b2f9d3-ef6d-41f2-9f4d-d4d8de0b0fc6/QlWIKOMqYa.json"></iframe>
+            
+            <p>Initial Kinetic Energy is NOT equal to final Kinetic Energy</p>
+        </div>
+    </div>
+    <div class="test">
+        <h2>Test</h2>
+        <h4>In what type of collision does this law of conservation of momentum apply?</h4>
+        <img src="src/pic/inel_mom.JPG"><br>
+        <div class="butcont">
+            <button onclick="incorrect()">Elastic</button>
+            <button onclick="correct()">Inelastic</button>
+        </div>
+        <h4>In what type of collision does this law of conservation of momentum apply?</h4>
+        <img src="src/pic/el_mom.JPG"><br>
+        <div class="butcont">
+            <button onclick="correct()">Elastic</button>
+            <button onclick="incorrect()">Inelastic</button>
+        </div>
+    </div>
+   </main>
+   <footer>
+    <a href="https://www.instagram.com/kitsu_lao?igsh=MTB1MWJsZGg0anR4Mw==" target="_blank"><img src="./src/pic/instagram.jpg" width=50 height=40></a>
+   </footer>
+   <script src="./js/script.js"></script>
+</body>
+</html>
