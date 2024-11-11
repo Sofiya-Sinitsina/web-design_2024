@@ -107,3 +107,11 @@ cot.addEventListener("click", (event) => {
     event.preventDefault()
     trigonom("cot");
 });
+
+function correct() {
+    alert("Correct answer!");
+}
+
+function incorrect() {
+    alert("You made a mistake :( Reread the notes!");
+}
